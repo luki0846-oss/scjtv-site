@@ -1,0 +1,10 @@
+{
+  "name": "scjtv-site",
+  "private": true,
+  "scripts": {
+    "build:news": "node tools/build_news_json.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
