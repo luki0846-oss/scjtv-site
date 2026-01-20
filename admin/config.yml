@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: luki0846-oss/scjtv-site
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Category", name: "category", widget: "select", options: ["featured","latest","popular","notice"], default: "latest" }
+      - { label: "Author", name: "author", widget: "string", default: "SCJtv" }
+      - { label: "Published At", name: "publishedAt", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+
+      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - { label: "Cover Caption", name: "coverCaption", widget: "string", required: false }
+
+      - { label: "Second Image (optional)", name: "image2", widget: "image", required: false }
+      - { label: "Second Image Caption", name: "image2Caption", widget: "string", required: false }
+
+      - { label: "Body", name: "body", widget: "markdown" }
