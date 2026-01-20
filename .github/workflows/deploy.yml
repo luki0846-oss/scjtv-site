@@ -1,0 +1,37 @@
+name: Deploy to Cafe24 (www)
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          # 업로드 대상 폴더
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+
+          # 현재 repo 루트를 통째로 업로드 (정적사이트라 빌드 없음)
+          local-dir: ./
+
+          # 안전하게: 서버 파일을 "전부 삭제 후 업로드" 하지 않음
+          dangerous-clean-slate: false
+
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/*.md
