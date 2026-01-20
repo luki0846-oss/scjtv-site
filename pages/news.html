@@ -151,6 +151,32 @@
       </section>
 
     </div>
+    <section id="news-auto" class="news-auto">
+  <h2>Latest</h2>
+  <div id="latestGrid" class="news-grid"></div>
+
+  <h2>All</h2>
+  <div id="newsList" class="news-list"></div>
+</section>
+
+<!-- 상세 팝업 -->
+<div id="newsModal" class="news-modal" hidden>
+  <div class="news-modal-backdrop" data-close></div>
+  <div class="news-modal-panel">
+    <button class="news-modal-close" type="button" data-close>Close</button>
+    <h1 id="modalTitle"></h1>
+    <p id="modalMeta"></p>
+    <figure id="modalCoverWrap" hidden>
+      <img id="modalCover" alt="" />
+      <figcaption id="modalCoverCap"></figcaption>
+    </figure>
+    <div id="modalBody" class="news-body"></div>
+    <figure id="modalImage2Wrap" hidden>
+      <img id="modalImage2" alt="" />
+      <figcaption id="modalImage2Cap"></figcaption>
+    </figure>
+  </div>
+</div>
   </main>
 
   <footer class="site-footer site-footer--light">
