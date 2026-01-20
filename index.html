@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SCJtv</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Header (고정/반투명) -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a class="brand" href="./index.html" aria-label="SCJtv 홈">
+        <!-- <img src="./assets/logo/scjtv.svg" alt="SCJtv" class="brand-logo" /> -->
+        <span class="brand-text">SCJtv</span>
+      </a>
+
+      <nav class="gnb" aria-label="주요 메뉴">
+        <a class="gnb-link" href="./pages/about.html">ABOUT SCJ TV</a>
+        <a class="gnb-link" href="./pages/news.html">NEWS</a>
+        <a class="gnb-link" href="./pages/programs.html">PROGRAMS</a>
+        <a class="gnb-link" href="./pages/contact.html">CONTACT</a>
+      </nav>
+
+      <!-- Mobile button -->
+      <button class="menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menu-btn-bar"></span>
+        <span class="menu-btn-bar"></span>
+        <span class="menu-btn-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a class="mobile-link" href="./pages/about.html">ABOUT SCJ TV</a>
+      <a class="mobile-link" href="./pages/news.html">NEWS</a>
+      <a class="mobile-link" href="./pages/programs.html">PROGRAMS</a>
+      <a class="mobile-link" href="./pages/contact.html">CONTACT</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (2 columns) -->
+    <section class="hero" aria-label="메인 비주얼">
+      <div class="hero-grid">
+        <div class="hero-panel hero-left" role="img" aria-label="Peace Maker 타이틀"></div>
+        <div class="hero-panel hero-right" role="img" aria-label="행사 사진"></div>
+      </div>
+    </section>
+
+    <!-- NEW CONTENTS -->
+<section class="contents" aria-label="신규 콘텐츠">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2 class="section-title">NEW CONTENTS</h2>
+    </div>
+          <div class="card-grid">
+            <!-- 카드 1 -->
+            <a class="card" href="./pages/detail.html?type=news&id=1">
+              <div class="card-thumb" style="background-image:url('./assets/img/card-1.jpg');"></div>
+              <div class="card-body">
+                <h3 class="card-title">China&#39;s population falls for fourth straight year</h3>
+                <p class="card-desc">Despite efforts to encourage young couples to have children, China&#39;s birth rate hit a record low.</p>
+                <div class="card-meta">
+                  <span>47 mins ago</span>
+                  <span class="dot"></span>
+                  <span>Asia</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- 카드 2 -->
+            <a class="card" href="./pages/detail.html?type=news&id=2">
+              <div class="card-thumb" style="background-image:url('./assets/img/card-2.jpg');"></div>
+              <div class="card-body">
+                <h3 class="card-title">&#39;Europe won&#39;t be blackmailed,&#39; Danish PM says in wake of Trump Greenland threats</h3>
+                <p class="card-desc">Trump says he will impose new taxes on US allies in February if they oppose his proposed takeover of the autonomous Danish territory.</p>
+                <div class="card-meta">
+                  <span>2 hours ago</span>
+                  <span class="dot"></span>
+                  <span>World</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- 카드 3 -->
+            <a class="card" href="./pages/detail.html?type=programs&id=3">
+              <div class="card-thumb" style="background-image:url('./assets/img/card-3.jpg');"></div>
+              <div class="card-body">
+                <h3 class="card-title">New contents, Youtube Youtube Youtube</h3>
+                <p class="card-desc">New contents, Youtube New contents, Youtube New contents, Youtube</p>
+                <div class="card-meta">
+                  <span>Programs</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- 카드 4 -->
+            <a class="card" href="./pages/detail.html?type=programs&id=4">
+              <div class="card-thumb" style="background-image:url('./assets/img/card-4.jpg');"></div>
+              <div class="card-body">
+                <h3 class="card-title">New contents, Youtube Youtube Youtube</h3>
+                <p class="card-desc">New contents, Youtube New contents, Youtube New contents, Youtube</p>
+                <div class="card-meta">
+                  <span>Programs</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© SCJtv. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
