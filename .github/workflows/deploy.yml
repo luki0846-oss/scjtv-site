@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
 
           # 업로드 대상 폴더
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          server-dir: ./
 
           # 현재 repo 루트를 통째로 업로드 (정적사이트라 빌드 없음)
           local-dir: ./
